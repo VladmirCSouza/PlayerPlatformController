@@ -1,7 +1,7 @@
-﻿using Channel3.Character.Behaviors;
+﻿using Channel3.Character.State;
 using UnityEngine;
 
-public class MoveCrouchedBehaviour : ICharacterBehaviour
+public class MoveCrouchedState : ICharacterState
 {
     public void FixedUpdate()
     {

@@ -1,6 +1,6 @@
-﻿namespace Channel3.Character.Behaviors
+﻿namespace Channel3.Character.State
 {
-    public interface ICharacterBehaviour
+    public interface ICharacterState
     {
         void OnStateEnter();
         void Update();

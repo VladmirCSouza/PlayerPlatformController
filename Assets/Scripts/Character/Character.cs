@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Channel3.Character.Behaviors;
+using Channel3.Character.State;
 
 namespace Channel3.Character
 {
@@ -7,17 +7,17 @@ namespace Channel3.Character
     public abstract class Character : MonoBehaviour
     {
         private new Rigidbody2D rigidbody;
-        internal ICharacterBehaviour currentBehaviour;
+        internal ICharacterState currentState;
 
         public virtual void Start()
         {
             rigidbody = GetComponent<Rigidbody2D>();
         }
 
-        public abstract void OnStateEnter(ICharacterBehaviour state);
-        public abstract void OnStateUpdate(ICharacterBehaviour state);
-        public abstract void OnStateExit(ICharacterBehaviour state);
-        public abstract bool CheckForValidStateChange(ICharacterBehaviour state);
+        public abstract void OnStateEnter(ICharacterState state);
+        public abstract void OnStateUpdate(ICharacterState state);
+        public abstract void OnStateExit(ICharacterState state);
+        public abstract bool CheckForValidStateChange(ICharacterState state);
     }
 }
 

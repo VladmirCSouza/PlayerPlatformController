@@ -1,7 +1,7 @@
-using Channel3.Character.Behaviors;
+using Channel3.Character.State;
 using UnityEngine;
 
-public class MoveBase : ICharacterBehaviour
+public class MoveBase : ICharacterState
 {
     public void FixedUpdate()
     {

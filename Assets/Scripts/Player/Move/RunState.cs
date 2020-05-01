@@ -1,7 +1,7 @@
-﻿using Channel3.Character.Behaviors;
+﻿using Channel3.Character.State;
 using UnityEngine;
 
-public class RunBehaviour : ICharacterBehaviour
+public class RunState : ICharacterState
 {
     public void FixedUpdate()
     {
