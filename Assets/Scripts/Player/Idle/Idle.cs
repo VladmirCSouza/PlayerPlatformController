@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Idle : ICharacterState
 {
+    private string id = "IDLE";
+    public string Id { get => id; }
+
     public void OnStateEnter()
     {
         Debug.Log("OnStateEnter");
@@ -10,7 +13,11 @@ public class Idle : ICharacterState
 
     public void Update()
     {
-        Debug.Log("Update");
+        Debug.Log("Idle Update");
+        if (Input.GetAxis("Horizontal") != 0)
+        {
+            PlayerFSM.Instance.ChangeState(new WalkState());
+        }
     }
     
     public void FixedUpdate()

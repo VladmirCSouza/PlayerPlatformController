@@ -2,6 +2,8 @@
 {
     public interface ICharacterState
     {
+        string Id { get; }
+
         void OnStateEnter();
         void Update();
         void FixedUpdate();

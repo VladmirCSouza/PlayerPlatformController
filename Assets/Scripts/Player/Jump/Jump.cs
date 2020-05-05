@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Jump : ICharacterState
 {
+    private string id = "JUMP";
+    public string Id { get => id; }
+
     public void OnStateEnter()
     {
         Debug.Log("OnStateEnter");

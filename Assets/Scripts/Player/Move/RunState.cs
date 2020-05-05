@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class RunState : ICharacterState
 {
+    private string id = "RUN_STATE";
+    public string Id { get => id; }
+
     public void OnStateEnter()
     {
         Debug.Log("OnStateEnter");
