@@ -4,21 +4,21 @@ using UnityEngine;
 
 [RequireComponent (typeof(Character))]
 public class Player : Character
-{
-
+{    
     public delegate void OnPlayerStateChange(ICharacterState newPlayerState);
     public event OnPlayerStateChange OnStateChange;
 
     public override void Start()
     {
         base.Start();
-        currentState = new WalkState();
+        currentState = new Idle();
     }
 
     private void Update()
     {
         if (Input.GetAxis("Horizontal") != 0)
         {
+            Debug.Log(currentState.GetType());
             currentState.Update();
         }
     }

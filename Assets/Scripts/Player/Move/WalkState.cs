@@ -3,23 +3,23 @@ using UnityEngine;
 
 public class WalkState : ICharacterState
 {
-    public void FixedUpdate()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public void OnStateEnter()
     {
-        throw new System.NotImplementedException();
-    }
-
-    public void OnStateExit()
-    {
-        throw new System.NotImplementedException();
+        Debug.Log("OnStateEnter");
     }
 
     public void Update()
     {
-        Debug.Log("Walk");
+        Debug.Log("Update");
+    }
+    
+    public void FixedUpdate()
+    {
+        Debug.Log("FixedUpdate");
+    }
+    
+    public void OnStateExit()
+    {
+        Debug.Log("OnStateEnter");
     }
 }

@@ -1,7 +1,7 @@
-using Channel3.Character.State;
+﻿using Channel3.Character.State;
 using UnityEngine;
 
-public class MoveBase : ICharacterState
+public class Jump : ICharacterState
 {
     public void OnStateEnter()
     {
@@ -22,5 +22,4 @@ public class MoveBase : ICharacterState
     {
         Debug.Log("OnStateEnter");
     }
-       
 }

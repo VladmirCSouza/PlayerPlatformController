@@ -1,7 +1,7 @@
-using Channel3.Character.State;
+﻿using Channel3.Character.State;
 using UnityEngine;
 
-public class MoveBase : ICharacterState
+public class Idle : ICharacterState
 {
     public void OnStateEnter()
     {
@@ -17,10 +17,9 @@ public class MoveBase : ICharacterState
     {
         Debug.Log("FixedUpdate");
     }
-    
+
     public void OnStateExit()
     {
         Debug.Log("OnStateEnter");
     }
-       
 }
