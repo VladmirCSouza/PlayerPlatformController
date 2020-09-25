@@ -17,6 +17,8 @@ namespace Channel3.ScriptableObjects
         public float RunSpeed => runSpeed;
         [SerializeField] private float crouchSpeed = 25.0f;
         public float CrouchSpeed => crouchSpeed;
+        public bool CanDash { get => canDash; set => canDash = value; }
+        [SerializeField] private bool canDash = true;
 
         [Header("JUMP")]
         [SerializeField] private float firstJumpPower = 50.0f;

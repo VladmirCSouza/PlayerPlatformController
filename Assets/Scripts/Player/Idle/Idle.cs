@@ -13,11 +13,7 @@ public class Idle : ICharacterState
 
     public void Update()
     {
-        Debug.Log("Idle Update");
-        if (Input.GetAxis("Horizontal") != 0)
-        {
-            PlayerFSM.Instance.ChangeState(new WalkState());
-        }
+       
     }
     
     public void FixedUpdate()
