@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   health: 100
-  walkSpeed: 50
-  runSpeed: 150
+  walkSpeed: 1
+  runSpeed: 2
   crouchSpeed: 25
-  firstJumpPower: 50
-  secondJumpPower: 25
+  canDash: 1
+  firstJumpPower: 4
+  secondJumpPower: 5
   wallJumpPower: 20
   canDoubleJump: 1
   canDoWallJump: 1

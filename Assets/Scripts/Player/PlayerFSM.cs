@@ -1,48 +1,21 @@
 using Channel3.Character.State;
 using Channel3.Utils.Singleton;
-using UnityEngine;
 
 public class PlayerFSM : Singleton<PlayerFSM>
 {
+    public ICharacterState CurrentState { get; private set; }
 
-    private ICharacterState currentState;
-    public ICharacterState CurrentState => currentState;
-
+    public bool ValidUpdate { get; private set; }
     public void ChangeState(ICharacterState newState)
     {
-        // Leave like this for now
-        if(CheckForValidStateChange(newState))
-            currentState = newState;
+        CurrentState = newState;
+        ValidUpdate = true;
+
     }
 
-    public void OnStateEnter(ICharacterState state)
+    public void Reset()
     {
-        
+        ValidUpdate = false;
     }
 
-    public void StateUpdate()
-    {
-        currentState.Update();
-    }
-
-    public void StateFixedUpdate(ICharacterState state)
-    {
-
-    }
-
-    public void OnStateExit(ICharacterState state)
-    {
-        
-    }
-
-    public bool CheckForValidStateChange(ICharacterState newState)
-    {
-        if(currentState == null)
-            return true;
-
-        if(currentState.Id == newState.Id)
-            return false;
-
-        return true;
-    }
 }
